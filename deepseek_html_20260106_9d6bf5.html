@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alnadeem Car Transport | النديم لنقل السيارات</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-dark: #0a1931;
+            --primary-navy: #1a365d;
+            --primary-gold: #d4af37;
+            --primary-silver: #c0c0c0;
+            --light-bg: #f8f9fa;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Cairo', 'Montserrat', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            direction: rtl;
+        }
+        
+        .english {
+            font-family: 'Montserrat', sans-serif;
+            direction: ltr;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-en {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+        
+        .logo-ar {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-navy);
+        }
+        
+        .logo-icon {
+            color: var(--primary-gold);
+            font-size: 1.8rem;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--primary-navy);
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        nav a:hover {
+            color: var(--primary-gold);
+        }
+        
+        nav a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary-gold);
+            left: 0;
+            bottom: -5px;
+            transition: var(--transition);
+        }
+        
+        nav a:hover:after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(10, 25, 49, 0.85), rgba(10, 25, 49, 0.9)), url('https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1925&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 180px 0 120px;
+            text-align: center;
+            margin-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--primary-silver);
+        }
+        
+        .hero-description {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .btn {
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-gold);
+            color: var(--primary-dark);
+        }
+        
+        .btn-primary:hover {
+            background-color: #e6c34c;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        .trust-indicators {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 60px;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 50px;
+        }
+        
+        .stars {
+            color: var(--primary-gold);
+        }
+        
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .trust-icon {
+            background-color: rgba(212, 175, 55, 0.2);
+            color: var(--primary-gold);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Services Section */
+        .section {
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 3px;
+            background: var(--primary-gold);
+            bottom: -10px;
+            right: 50%;
+            transform: translateX(50%);
+        }
+        
+        .section-title p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 35px 25px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(26, 54, 93, 0.1));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 1.8rem;
+            color: var(--primary-gold);
+        }
+        
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+        }
+        
+        /* Why Choose Us */
+        .why-us {
+            background-color: var(--light-bg);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-card i {
+            font-size: 2.2rem;
+            color: var(--primary-gold);
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+        }
+        
+        /* How It Works */
+        .steps-container {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+        
+        .steps-container:before {
+            content: '';
+            position: absolute;
+            width: 80%;
+            height: 2px;
+            background: var(--primary-silver);
+            top: 40px;
+            right: 10%;
+            z-index: 1;
+        }
+        
+        .step {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            margin-bottom: 40px;
+        }
+        
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: var(--primary-gold);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0 auto 20px;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+        
+        .step h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(to right, var(--primary-dark), var(--primary-navy));
+            color: var(--white);
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+        
+        .cta-section .btn {
+            padding: 18px 45px;
+            font-size: 1.2rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            padding: 70px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-logo-text .logo-en {
+            color: var(--white);
+        }
+        
+        .footer-logo-text .logo-ar {
+            color: var(--primary-silver);
+        }
+        
+        .footer-about p {
+            margin-top: 15px;
+            opacity: 0.8;
+            line-height: 1.8;
+        }
+        
+        .footer-heading {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-heading:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background: var(--primary-gold);
+            bottom: 0;
+            right: 0;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-gold);
+            padding-right: 5px;
+        }
+        
+        .contact-info p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .contact-info i {
+            color: var(--primary-gold);
+            width: 20px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+        
+        .social-icons a:hover {
+            background: var(--primary-gold);
+            color: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.95rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.7rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.6rem;
+            }
+            
+            .steps-container:before {
+                display: none;
+            }
+            
+            .step {
+                min-width: 50%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero {
+                padding: 150px 0 90px;
+            }
+            
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.4rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .trust-indicators {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .section {
+                padding: 70px 0;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+        
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+        
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-truck-moving"></i>
+                </div>
+                <div class="logo-text">
+                    <div class="logo-en english">Alnadeem Car Transport</div>
+                    <div class="logo-ar">النديم لنقل السيارات</div>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul>
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#services">خدماتنا</a></li>
+                    <li><a href="#why-us">لماذا نحن</a></li>
+                    <li><a href="#how-it-works">كيف نعمل</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1 class="english">Reliable Car Transport Across the UAE</h1>
+                <div class="hero-subtitle">نقل سيارات موثوق في جميع أنحاء الإمارات</div>
+                <p class="hero-description">نقدم خدمات نقل سيارات آمنة ومضمونة في جميع أنحاء الإمارات العربية المتحدة. خبرة واسعة في نقل السيارات الفاخرة والرياضية والشاحنات مع فريق محترف ومدرب.</p>
+                
+                <div class="cta-buttons">
+                    <button class="btn btn-primary english">
+                        <i class="fas fa-calculator"></i> Get a Free Quote
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-phone"></i> Call Now
+                    </button>
+                </div>
+                
+                <div class="trust-indicators fade-in delay-1">
+                    <div class="rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="rating-text english">4.7 Rating</div>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="trust-text">نقل مؤمن بالكامل</div>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="trust-text english">Trusted by hundreds of customers across the UAE</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>خدماتنا المتخصصة</h2>
+                <p class="english">We provide comprehensive car transport services across all emirates with safety and professionalism</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>نقل السيارات داخل الإمارات</h3>
+                    <p class="english">Car Transport Across UAE</p>
+                    <p>خدمة نقل سيارات آمنة وسريعة بين جميع إمارات الدولة مع ضمان وصول سيارتك بأمان تام.</p>
+                </div>
+                
+                <div class="service-card fade-in delay-1">
+                    <div class="service-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>نقل السيارات الفاخرة والرياضية</h3>
+                    <p class="english">Luxury & Sports Car Transport</p>
+                    <p>نقل متخصص للسيارات الفاخرة والرياضية مع معدات وتقنيات متطورة تضمن الحماية الكاملة.</p>
+                </div>
+                
+                <div class="service-card fade-in delay-2">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>التوصيل من الباب إلى الباب</h3>
+                    <p class="english">Door-to-Door Vehicle Delivery</p>
+                    <p>نقوم باستلام سيارتك من العنوان المحدد وتسليمها إلى العنوان المطلوب بتوقيت دقيق.</p>
+                </div>
+                
+                <div class="service-card fade-in delay-1">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>نقل مؤمن وآمن</h3>
+                    <p class="english">Safe & Insured Car Shipping</p>
+                    <p>جميع عمليات النقل مؤمنة بالكامل ضد أي أضرار مع توثيق كامل للعملية من البداية للنهاية.</p>
+                </div>
+                
+                <div class="service-card fade-in delay-2">
+                    <div class="service-icon">
+                        <i class="fas fa-truck-loading"></i>
+                    </div>
+                    <h3>نقل السيارات الفردية والجماعية</h3>
+                    <p class="english">Individual & Fleet Transport</p>
+                    <p>نقل سيارات فردية أو أساطيل كاملة للشركات والمؤسسات بأسعار تنافسية وخدمة مميزة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section why-us" id="why-us">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>لماذا تختار النديم؟</h2>
+                <p class="english">Why Choose Alnadeem Car Transport</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <i class="fas fa-bolt"></i>
+                    <h3>خدمة سريعة وموثوقة</h3>
+                    <p class="english">Fast & reliable service</p>
+                    <p>نضمن وصول سيارتك في الوقت المحدد مع مراعاة أعلى معايير السلامة والأمان.</p>
+                </div>
+                
+                <div class="feature-card fade-in delay-1">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>سائقون محترفون</h3>
+                    <p class="english">Professional drivers</p>
+                    <p>فريق سائقين مدربين ومحترفين ذوي خبرة طويلة في مجال نقل السيارات.</p>
+                </div>
+                
+                <div class="feature-card fade-in delay-2">
+                    <i class="fas fa-file-contract"></i>
+                    <h3>تأمين شامل</h3>
+                    <p class="english">Fully insured transport</p>
+                    <p>جميع عمليات النقل مؤمنة بالكامل ضد أي أضرار محتملة خلال الرحلة.</p>
+                </div>
+                
+                <div class="feature-card fade-in delay-1">
+                    <i class="fas fa-tags"></i>
+                    <h3>أسعار تنافسية</h3>
+                    <p class="english">Competitive pricing</p>
+                    <p>نقدم أسعاراً تنافسية مع ضمان عدم وجود رسوم خفية أو مفاجئة.</p>
+                </div>
+                
+                <div class="feature-card fade-in delay-2">
+                    <i class="fas fa-headset"></i>
+                    <h3>دعم عملاء ممتاز</h3>
+                    <p class="english">Excellent customer support</p>
+                    <p>فريق دعم على مدار الساعة لمتابعة عملية النقل والإجابة على استفساراتكم.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section" id="how-it-works">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>كيفية العمل معنا</h2>
+                <p class="english">Simple & Efficient Process</p>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step fade-in">
+                    <div class="step-number">1</div>
+                    <h3>اطلب عرض سعر</h3>
+                    <p class="english">Request a quote</p>
+                    <p>اتصل بنا أو املأ النموذج للحصول على عرض سعر مجاني وفوري.</p>
+                </div>
+                
+                <div class="step fade-in delay-1">
+                    <div class="step-number">2</div>
+                    <h3>حدد موعد الاستلام</h3>
+                    <p class="english">Schedule pickup</p>
+                    <p>اختر الموعد المناسب لك وسنأتي لاستلام سيارتك من العنوان المحدد.</p>
+                </div>
+                
+                <div class="step fade-in delay-2">
+                    <div class="step-number">3</div>
+                    <h3>النقل الآمن</h3>
+                    <p class="english">Vehicle transported safely</p>
+                    <p>نقل سيارتك بأعلى معايير السلامة مع التتبع المستمر للرحلة.</p>
+                </div>
+                
+                <div class="step fade-in delay-3">
+                    <div class="step-number">4</div>
+                    <h3>التسليم في الموعد</h3>
+                    <p class="english">Delivered on time</p>
+                    <p>تسليم سيارتك في الوقت المتفق عليه مع فحص وتسليم المستندات.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <h2 class="fade-in">هل تحتاج لنقل سيارتك اليوم؟</h2>
+            <p class="fade-in delay-1 english">Need to move your car today? Contact us now for a free, no-obligation quote and experience premium car transport service.</p>
+            <button class="btn btn-primary fade-in delay-2">
+                <i class="fas fa-paper-plane"></i> اطلب عرض سعرك الآن
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-truck-moving"></i>
+                        </div>
+                        <div class="footer-logo-text">
+                            <div class="logo-en english">Alnadeem Car Transport</div>
+                            <div class="logo-ar">النديم لنقل السيارات</div>
+                        </div>
+                    </div>
+                    <p>شركة رائدة في نقل السيارات في جميع أنحاء الإمارات العربية المتحدة، نقدم خدمات نقل آمنة وموثوقة مع الحفاظ على أعلى معايير الجودة والاحترافية.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-heading">خدماتنا</h3>
+                    <ul>
+                        <li><a href="#">نقل السيارات داخل الإمارات</a></li>
+                        <li><a href="#">نقل السيارات الفاخرة</a></li>
+                        <li><a href="#">التوصيل من الباب إلى الباب</a></li>
+                        <li><a href="#">نقل الأساطيل والشركات</a></li>
+                        <li><a href="#">خدمات النقل المؤمن</a></li>
+                    </ul>
+                </div>
+                
+                <div class="contact-info">
+                    <h3 class="footer-heading">اتصل بنا</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> دبي، الإمارات العربية المتحدة</p>
+                    <p><i class="fas fa-phone"></i> <span class="english">+971 50 123 4567</span></p>
+                    <p><i class="fas fa-envelope"></i> <span class="english">info@alnadeem-transport.ae</span></p>
+                    <p><i class="fas fa-clock"></i> من الأحد إلى الخميس: ٨ صباحاً - ٨ مساءً</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2023 Alnadeem Car Transport | النديم لنقل السيارات. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const nav = document.querySelector('nav ul');
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    if (window.innerWidth <= 768) {
+                        document.querySelector('nav ul').style.display = 'none';
+                    }
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Scroll animations
+        function checkScroll() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        }
+        
+        // Initial check
+        window.addEventListener('load', checkScroll);
+        window.addEventListener('scroll', checkScroll);
+        
+        // CTA button actions
+        document.querySelectorAll('.btn-primary').forEach(button => {
+            button.addEventListener('click', function() {
+                alert('شكراً لاهتمامك! سيتم توجيهك إلى نموذج طلب عرض السعر.');
+                // In a real implementation, this would open a form or redirect
+            });
+        });
+        
+        document.querySelector('.btn-secondary').addEventListener('click', function() {
+            alert('اتصل بنا على الرقم: +971 50 123 4567');
+        });
+    </script>
+</body>
+</html>
